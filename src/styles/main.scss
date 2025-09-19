@@ -47,28 +47,26 @@ $width-item: 100px;
   }
 
   &__day {
-    width: $width-item;
-    height: $width-item;
     background: #eee;
     border: 1px solid #000;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width-item;
+    height: $width-item;
     transition:
       background,
       transform 0.5s linear;
     box-sizing: border-box;
+    cursor: pointer;
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i}) {
         &::before {
           content: '#{$i}';
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100%;
           font:
             30px Arial,
             sans-serif;
-          text-align: center;
         }
       }
     }
